@@ -29,6 +29,14 @@ class Suit:
         return self.value
     def __eq__(self, other):
         return self.value == other.value
+    def __gt__(self, other):
+        return False
+    def __ge__(self, other):
+        return self == other or self > other
+    def __lt__(self, other):
+        return False
+    def __le__(self, other):
+        return self. == other or self < other
     
 class Card:
     def __init__(self, value, suit):
